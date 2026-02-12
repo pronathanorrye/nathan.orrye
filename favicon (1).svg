@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background rounded square -->
+  <rect width="64" height="64" rx="0" fill="#ffffff"/>
+  
+  <!-- Red accent top-right aurora -->
+  <radialGradient id="aurora-red" cx="90%" cy="10%" r="60%">
+    <stop offset="0%" stop-color="#E63946" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#E63946" stop-opacity="0"/>
+  </radialGradient>
+  <rect width="64" height="64" rx="0" fill="url(#aurora-red)"/>
+  
+  <!-- Yellow aurora bottom-left -->
+  <radialGradient id="aurora-yellow" cx="10%" cy="90%" r="55%">
+    <stop offset="0%" stop-color="#FFB800" stop-opacity="0.20"/>
+    <stop offset="100%" stop-color="#FFB800" stop-opacity="0"/>
+  </radialGradient>
+  <rect width="64" height="64" rx="0" fill="url(#aurora-yellow)"/>
+
+  <!-- Letter N - bold Syne style -->
+  <text x="50%" y="50%" 
+        font-family="'Syne', 'Arial Black', sans-serif" 
+        font-size="38" 
+        font-weight="800" 
+        fill="#0f0f0f" 
+        text-anchor="middle" 
+        dominant-baseline="central"
+        letter-spacing="-1">N</text>
+
+  <!-- Red underline accent -->
+  <rect x="18" y="50" width="28" height="3.5" rx="2" fill="#E63946"/>
+</svg>
