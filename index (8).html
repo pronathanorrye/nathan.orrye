@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nathan Orrye — Hospitality & Luxury Guest Services">
+  <title>Nathan Orrye — Hospitality & Luxury Guest Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#071827;--navy-2:#0b2238;--card:#102d46;--gold:#d8b56b;--gold-light:#f2dfad;--cream:#f8f4eb;--muted:#aab5b9;--line:#29445b;--shadow:0 24px 70px rgba(0,0,0,.28)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--navy);color:var(--cream);font-family:'DM Sans',sans-serif;line-height:1.6;overflow-x:hidden}
+    a{color:inherit}
+    .container{width:min(1120px,100%);margin:0 auto;padding:0 28px}
+    .site-header{position:relative;background:var(--navy);border-bottom:1px solid rgba(216,181,107,.18)}
+    .nav{height:88px;display:flex;align-items:center;justify-content:space-between}
+    .brand{text-decoration:none;display:flex;align-items:center;gap:12px}
+    .brand-mark{display:grid;place-items:center;width:34px;height:34px;border:1px solid var(--gold);border-radius:50%;color:var(--gold);font-family:'Playfair Display',serif;font-size:16px}
+    .brand-name{font-family:'Playfair Display',serif;font-size:19px;letter-spacing:.02em}
+    .nav-links{display:flex;gap:34px;list-style:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+    .nav-links a{text-decoration:none;transition:color .25s ease}.nav-links a:hover{color:var(--gold)}
+    .nav-links a[aria-current="page"]{color:var(--gold)}
+    .testimonials{padding:116px 24px 124px;background:var(--navy-2);position:relative;isolation:isolate}
+    .testimonials:before{content:"";position:absolute;z-index:-1;inset:0;background:radial-gradient(circle at 85% 8%,rgba(216,181,107,.12),transparent 32%),radial-gradient(circle at 5% 88%,rgba(57,117,153,.12),transparent 28%);pointer-events:none}
+    .section-header{text-align:center;margin-bottom:64px}.section-label{display:inline-block;margin-bottom:14px;color:var(--gold);font-size:11px;font-weight:600;letter-spacing:.28em;text-transform:uppercase}.section-title{font:600 clamp(2.1rem,5vw,3.45rem)/1.15 'Playfair Display',serif;letter-spacing:-.025em}
+    .testimonials-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;max-width:1060px;margin:0 auto}
+    .testimonial-card{background:linear-gradient(145deg,rgba(16,45,70,.98),rgba(11,34,56,.98));border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--shadow);transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;overflow:hidden}
+    .testimonial-card:hover{transform:translateY(-7px);border-color:rgba(216,181,107,.62);box-shadow:0 30px 80px rgba(0,0,0,.34)}
+    .testimonial-content{margin-bottom:22px}.testimonial-video{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:20px;background:#030b12;border:1px solid rgba(255,255,255,.08)}.testimonial-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .person-photo{width:74px;height:74px;flex:0 0 74px;overflow:hidden;border:2px solid var(--gold);border-radius:50%;background:#183c56}.person-photo img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+    .testimonial-person{display:flex;align-items:center;gap:17px;padding:4px 5px 3px}.person-info{min-width:0}.person-name{margin-bottom:3px;font:600 1.25rem/1.25 'Playfair Display',serif}.person-role{max-width:330px;color:var(--muted);font-size:.82rem;line-height:1.4}.person-contacts{display:flex;gap:9px;margin-top:11px}.contact-link{display:grid;place-items:center;width:31px;height:31px;border:1px solid var(--line);border-radius:9px;color:var(--muted);transition:all .25s ease}.contact-link:hover{color:var(--gold);border-color:var(--gold);transform:translateY(-2px)}.contact-link svg{width:15px;height:15px;fill:currentColor}
+    .footer{padding:86px 24px 35px;text-align:center;background:var(--navy);border-top:1px solid rgba(216,181,107,.18)}.footer-title{font:600 clamp(1.75rem,4vw,2.65rem)/1.2 'Playfair Display',serif}.footer-subtitle{max-width:560px;margin:14px auto 34px;color:var(--muted);font-size:.98rem}.footer-links{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:65px}.footer-link{display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border:1px solid var(--line);border-radius:12px;text-decoration:none;color:var(--cream);font-size:.88rem;transition:all .25s ease}.footer-link:hover{border-color:var(--gold);color:var(--gold);background:rgba(216,181,107,.05)}.footer-link svg{width:18px;height:18px;fill:currentColor}.footer-copyright{color:#73858e;font-size:.78rem}.footer-copyright span{color:var(--gold)}
+    .fade-in{opacity:0;transform:translateY(26px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}.fade-in.visible{opacity:1;transform:translateY(0)}
+    @media(max-width:760px){.nav{height:76px}.nav-links{gap:15px;font-size:10px}.brand-name{font-size:16px}.testimonials{padding:78px 12px 88px}.testimonials .container{padding:0 12px}.testimonials-grid{grid-template-columns:1fr;gap:22px}.testimonial-card{padding:15px;border-radius:20px}.testimonial-person{align-items:flex-start}.person-photo{width:64px;height:64px;flex-basis:64px}.person-name{font-size:1.1rem}.footer{padding:65px 20px 30px}.footer-links{flex-direction:column;align-items:center;margin-bottom:48px}.footer-link{width:min(290px,100%);justify-content:center}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fade-in{opacity:1;transform:none;transition:none}.testimonial-card,.contact-link,.footer-link{transition:none}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navigation principale">
+      <a class="brand" href="#accueil"><span class="brand-mark">N</span><span class="brand-name">Nathan Orrye</span></a>
+      <ul class="nav-links"><li><a href="#accueil" aria-current="page">Accueil</a></li><li><a href="#temoignages">Témoignages</a></li><li><a href="#contact">Contact</a></li></ul>
+    </nav>
+  </header>
+  <main id="accueil">
+    <section class="testimonials" id="temoignages">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Témoignages</span>
+                <h2 class="section-title">Ce qu'ils disent de moi</h2>
+            </div>
+            <div class="testimonials-grid">
+                <article class="testimonial-card fade-in">
+                    <div class="testimonial-content">
+                        <div class="testimonial-video">
+                            <iframe src="https://www.youtube.com/embed/e795cl0C1aY" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="testimonial-person">
+                        <div class="person-photo"><img src="francois.jpeg" alt="François LeBreton"></div>
+                        <div class="person-info">
+                            <h3 class="person-name">François LeBreton</h3>
+                            <p class="person-role">Chargé de Webmarketing & E-Commerce - NISSAN</p>
+                            <div class="person-contacts">
+                                <a href="https://www.linkedin.com/in/fran%C3%A7ois-lebreton/" class="contact-link" target="_blank"><svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                              <a href="contact@go-mep.com" class="contact-link" target="_blank"><svg viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial-card fade-in">
+                    <div class="testimonial-content">
+                        <div class="testimonial-video">
+                          <iframe src="https://www.loom.com/embed/86b7cc22eb9d4b8b8531e0003acfdecd" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="width:100%;height:100%;border:none;border-radius:20px;"></iframe>
+                        </div>
+                    </div>
+                    <div class="testimonial-person">
+                        <div class="person-photo"><img src="alex.jpeg" alt="alex"></div>
+                        <div class="person-info">
+                            <h3 class="person-name">Alexandre Le Labourier</h3>
+                            <p class="person-role">Fondateur & infopreneur - Smartlife Coaching</p>
+                            <div class="person-contacts">
+                                <a href="https://www.youtube.com/@smartlifecoaching" class="contact-link" target="_blank"><svg viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg></a>
+                                <a href="https://www.instagram.com/smartlife.coaching/" class="contact-link" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+  </main>
+  <footer class="footer" id="contact">
+    <h2 class="footer-title">Construisons l'expérience de demain</h2>
+    <p class="footer-subtitle">Disponible pour une opportunité en hôtellerie de luxe internationale</p>
+    <div class="footer-links">
+      <a class="footer-link" href="/cdn-cgi/l/email-protection#792f362d2b3c543c34383035391c011c1409151c571a1614"><svg viewBox="0 0 24 24"><path d="M0 4.5v15h24v-15l-12 9-12-9zm12 6.5 12-9H0l12 9z"/></svg>Email</a>
+      <a class="footer-link" href="tel:+33782550874"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.46 15.46 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>+33 7 82 55 08 74</a>
+    </div>
+    <p class="footer-copyright">© 2026 <span>Nathan Orrye</span> · Rennes, France · Permis B</p>
+  </footer>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"8607d2a720d14b038279025b2b5a82e5"}' crossorigin="anonymous"></script>
+</body>
+</html>
